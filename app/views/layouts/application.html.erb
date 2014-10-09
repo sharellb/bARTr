@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>bARTr</title>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+	  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic|Merriweather:400,700,400italic' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<div class="wrapper">
+			<%= render "layouts/header" %>
+			<%= yield %>
+			<div class="push"></div>
+		</div>
+		<%= render "layouts/footer" %>
+
+	</body>
+</html>
