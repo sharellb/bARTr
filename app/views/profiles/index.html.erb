@@ -1,0 +1,9 @@
+<div class="center">
+	<h1 >Users</h1>
+	<div class="text-block">
+		<% @users.each do |user| %>
+			<%= link_to user.profile_name, "/#{user.profile_name}" %>
+		<% end %>
+	</div>
+</div>
+
