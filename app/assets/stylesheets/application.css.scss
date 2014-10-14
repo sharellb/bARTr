@@ -30,10 +30,25 @@ html, body {
 	padding: 10px;
 	width: 70%;
 	background-color: #00B4B4;
-	color: white;
 	font-family: 'Lato', sans-serif; font-weight: 700;
 	text-align: center;
 	border-radius: 10px;
+	color: white;
+}
+
+.center-page {
+	width: 100%;
+	font-family: 'Lato', sans-serif; font-weight: 700;
+	text-align: center;
+	padding: 10px;
+	color: white;
+	padding: 0px;
+	margin: 20px auto;
+	h1 {
+	 width: 100%;
+	 background-color: #00B4B4;
+	 color: white;
+	}
 }
 
 nav {
@@ -60,6 +75,24 @@ nav {
 	color: #FF4571;
 }
 
+.links {
+	ul {
+		list-style: none;
+		padding-left:0;
+	}
+	a {
+		text-decoration: none;
+		color: #F0A400;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	a:hover {
+		text-decoration: none;
+		color: #00B4B4;
+	}
+}
+
 .text-block {
 	background-color: white;
 	color: black;
@@ -81,6 +114,17 @@ hr {
 		text-decoration: none;
 		color: white;
 	}
+}
+
+#banner {
+	height: 60%;
+	width: 100%;
+}
+
+.image {
+	height: 50%;
+	width: 100%;
+	margin: 20px auto;
 }
 
 .wrapper {
