@@ -22,7 +22,7 @@ class ProfilesController < ApplicationController
 	def update
 		@user = User.find_by_profile_name(params[:id])
 		if @user.update(user_params)
-			render 'show'
+			render action: :show
 		else
 			render 'edit'
 		end
