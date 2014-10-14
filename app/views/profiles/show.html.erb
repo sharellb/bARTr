@@ -26,6 +26,10 @@
 			<% if !@user.website.empty? %>
 				<li><%= link_to 'Website', "http://#{@user.website}" %></li>
 		    <% end %>
+
+			<% if !@user.github.empty? %>
+				<li><%= link_to 'Github', "http://#{@user.github}" %></li>
+		    <% end %>
 		</div>
 		<div id="location">
 			<%= @user.location %>
