@@ -4,10 +4,10 @@
 	<%= form_for(@user) do |f| %>
 
 	<div><%= f.label :about %><br />
-      <%= f.text_field :about, autofocus: true %></div>
+      <%= f.text_area :about, autofocus: true, :rows=>5 %></div>
     
     <div><%= f.label "I'm looking for..." %><br />
-      <%= f.text_field :long_request, autofocus: true %></div>
+      <%= f.text_area :long_request, autofocus: true, :rows=>5 %></div>
 
 	<h3>Social Media</h3>
 	  <div><%= f.label :facebook %><br />
@@ -24,6 +24,9 @@
 
       <div><%= f.label :soundcloud %><br />
       <%= f.text_field :soundcloud, autofocus: true %></div>
+
+      <div><%= f.label :github %><br />
+      <%= f.text_field :github, autofocus: true %></div>
 
 	  <div><%= f.submit "Update" %></div>
 	<% end %>

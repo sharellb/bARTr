@@ -51,6 +51,7 @@ GEM
     execjs (2.2.1)
     ffi (1.9.6)
     formatador (0.2.5)
+    geocoder (1.2.5)
     gravtastic (3.2.6)
     guard (2.6.1)
       formatador (>= 0.2.4)
@@ -173,6 +174,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise
+  geocoder
   gravtastic
   guard-minitest (= 2.3.1)
   jbuilder (~> 2.0)

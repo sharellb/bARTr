@@ -1,12 +1,12 @@
 <div class="center-page">
 	<h1 >Users</h1>
 	<div class="text-block">
-		<div class="links">
-			<% @users.each do |user| %>
-				<div><%= image_tag user.gravatar_url %></div>
+		<% @users.each do |user| %>
+			<div class="thumbnail">
+				<%= image_tag user.gravatar_url %></br>
 				<%= link_to user.profile_name, "/#{user.profile_name}" %>
-			<% end %>
-		</div>
+			</div>
+		<% end %>
 	</div>
 </div>
 

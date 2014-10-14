@@ -1,3 +1,81 @@
 // Place all the styles related to the Profiles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#location {
+	color: #00B4B4;
+}
+
+.btn {
+	background-color: #FF4571;
+	border-radius: 5px;
+	a, a:hover{
+		text-decoration: none;
+		color: white;
+	}
+}
+
+
+.links {
+	ul {
+		list-style: none;
+		padding-left:0;
+	}
+	a {
+		text-decoration: none;
+		color: #F0A400;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	a:hover {
+		text-decoration: none;
+		color: #00B4B4;
+	}
+}
+
+#profile-top {
+	float: left;
+}
+
+.thumbnail {
+	border-style: solid;
+	border-width: 2px;
+	border-color: #FF4571;
+	border-radius: 2px;
+	text-align: center;
+	padding: 4px;
+	margin: 3px;
+	width: 100px;
+	float: left;
+
+	a {
+		text-decoration: none;
+		color: #00B4B4;
+	}
+
+	a:hover {
+		color: #FF4571;
+	}
+}
+
+.center-page {
+	width: 100%;
+	font-family: 'Lato', sans-serif; font-weight: 700;
+	text-align: center;
+	padding: 10px;
+	color: white;
+	padding: 0px;
+	margin: 20px auto;
+	h1 {
+	 width: 100%;
+	 background-color: #00B4B4;
+	 color: white;
+	}
+
+	h2 {
+	 width: 100%;
+	 background-color: #FF4571;
+	 color: white;
+	}
+}

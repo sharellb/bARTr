@@ -1,14 +1,14 @@
-<div class="center">
+<div class="center-page">
 	<h1><%= @user.profile_name %></h1>
 	<div class="text-block">
-		<div><%= image_tag @user.gravatar_url %></div>
-		<% if current_user %>
-			<button class="btn"><%= link_to "Edit profile", "/#{@user.profile_name}/edit" %></button>
-		<% else %>
-			<button class="btn"><%= link_to "Send #{@user.profile_name} a message", '/messages/new' %></button>
-		<% end %>
-
-
+		<div>
+			<div id="profile-top"><%= image_tag @user.gravatar_url %></div>
+			<% if current_user %>
+				<button class="btn"><%= link_to "Edit profile", "/#{@user.profile_name}/edit" %></button>
+			<% else %>
+				<button class="btn"><%= link_to "Send #{@user.profile_name} a message", '/messages/new' %></button>
+			<% end %>
+		</div>
 		<div class="links">
 			<ul>
 			<% if !@user.facebook.empty? %>
@@ -27,5 +27,15 @@
 				<li><%= link_to 'Website', "http://#{@user.website}" %></li>
 		    <% end %>
 		</div>
+		<div id="location">
+			<%= @user.location %>
+		</div>
     </div>
+    <h2>General</h2>
+    <div class="text-block">
+    	<h3>About</h3>
+    	<p><%= @user.about %></p></br>
+    	<h3>I'm looking for...</h3>
+    	<p><%= @user.long_request %></p>
+	</div>
 </div>
