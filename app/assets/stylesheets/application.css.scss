@@ -73,6 +73,16 @@ hr {
 	color: #F0A400;
 	background-color: #F0A400;
 }
+
+.btn {
+	background-color: #FF4571;
+	border-radius: 5px;
+	a, a:hover{
+		text-decoration: none;
+		color: white;
+	}
+}
+
 .wrapper {
 	min-height: 100%;
 	height: auto !important;
@@ -97,6 +107,10 @@ hr {
 		}
 	}
 	}
+}
+
+.clear {
+	clear: both;
 }
 
 .push {

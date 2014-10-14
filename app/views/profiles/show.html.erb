@@ -1,6 +1,7 @@
 <div class="center">
 	<h1><%= @user.profile_name %></h1>
 	<div class="text-block">
-		<button><%= link_to "Send #{@user.profile_name} a message", '/messages/new' %></button>
+		<div class="clear"><%= image_tag @user.gravatar_url %></div>
+		<button class="btn"><%= link_to "Send #{@user.profile_name} a message", '/messages/new' %></button>
 	</div>
 </div>

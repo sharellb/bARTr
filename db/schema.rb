@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141013175306) do
+ActiveRecord::Schema.define(version: 20141014144823) do
 
   create_table "conversations", force: true do |t|
     t.datetime "created_at"
@@ -50,6 +50,14 @@ ActiveRecord::Schema.define(version: 20141013175306) do
     t.string   "first_name"
     t.string   "last_name"
     t.text     "about"
+    t.text     "long_request"
+    t.string   "link"
+    t.string   "facebook"
+    t.string   "linkedin"
+    t.string   "github"
+    t.string   "website"
+    t.string   "dribble"
+    t.string   "soundcloud"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

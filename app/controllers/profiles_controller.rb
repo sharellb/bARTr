@@ -17,4 +17,22 @@ class ProfilesController < ApplicationController
 			render file: 'public/404', status: 404, formats: [:html]
 		end
 	end
+
+	def update
+		@user = User.find_by_id(params[:id])
+		if @user.update(user_params)
+			render action: :show
+		end
+	end
+
+	def edit
+		@user = User.find_by_profile_name(params[:id])
+	end
+
+
+	private
+
+	def user_params
+		params.require(:user).permit(:soundcloud, :facebook, :linkedin, :link, :about, :website, :dribble, :long_request)
+	end
 end

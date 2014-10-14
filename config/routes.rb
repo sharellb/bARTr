@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'static_pages#home'
   get '/:id', to: 'profiles#show'
+  get '/:id/edit', to: 'profiles#edit', :as => :user
+  patch '/:id/edit', to: 'profiles#update'
+  put '/:id/', to: 'profiles#update'
   root 'static_pages#home'
 
   resources :messages

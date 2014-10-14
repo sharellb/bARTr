@@ -3,8 +3,8 @@
 	<ul>
 	  <li><div id="logo">bARTr</div></li>
 	  <li><%= link_to 'home', '/home' %></li>
+	  <li><%= link_to 'users', '/all' %></li>
 	  <% if current_user %>
-	  	<li><%= link_to 'users', '/all' %></li>
 	  	<li><%= link_to 'profile', "/#{current_user.profile_name}" %></li>
 	  <% end %>
 	  <%= render 'layouts/registration' %>
