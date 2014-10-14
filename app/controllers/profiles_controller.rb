@@ -34,7 +34,7 @@ class ProfilesController < ApplicationController
 	private
 
 	def user_params
-		params.require(:user).permit(:soundcloud, :facebook, :linkedin, :link, :about, :website, :dribble, :long_request)
+		params.require(:user).permit(:soundcloud, :facebook, :linkedin, :link, :about, :website, :dribble, :long_request, :github)
 	end
 
 	def set_user
