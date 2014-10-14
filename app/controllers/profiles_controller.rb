@@ -23,8 +23,6 @@ class ProfilesController < ApplicationController
 		@user = User.find_by_profile_name(params[:id])
 		if @user.update(user_params)
 			redirect_to @user
-		else
-			render 'edit'
 		end
 	end
 
