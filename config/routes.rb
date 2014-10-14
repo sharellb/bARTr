@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   # root 'static_pages#home'
   get '/:id', to: 'profiles#show'
   get '/:id/edit', to: 'profiles#edit', :as => :user
-  patch '/:id/edit', to: 'profiles#update'
+  patch '/:id/', to: 'profiles#update', :as => :update_user
   put '/:id/', to: 'profiles#update'
   root 'static_pages#home'
 

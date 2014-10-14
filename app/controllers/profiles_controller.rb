@@ -1,4 +1,5 @@
 class ProfilesController < ApplicationController
+	before_action :set_user, only: [:show, :edit, :update, :destroy]
 	def show
 		@user = User.find_by_profile_name(params[:id])
 		if @user
@@ -19,9 +20,11 @@ class ProfilesController < ApplicationController
 	end
 
 	def update
-		@user = User.find_by_id(params[:id])
+		@user = User.find_by_profile_name(params[:id])
 		if @user.update(user_params)
-			render action: :show
+			render 'show'
+		else
+			render 'edit'
 		end
 	end
 
@@ -35,4 +38,9 @@ class ProfilesController < ApplicationController
 	def user_params
 		params.require(:user).permit(:soundcloud, :facebook, :linkedin, :link, :about, :website, :dribble, :long_request)
 	end
+
+	def set_user
+		@user = User.find_by_profile_name(params[:id])
+	end
+
 end

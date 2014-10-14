@@ -13,4 +13,8 @@ class User < ActiveRecord::Base
   has_many :conversations
   has_many :participants
 
+  def to_param
+    profile_name
+  end
+
 end
