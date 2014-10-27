@@ -1,5 +1,5 @@
 class Conversation < ActiveRecord::Base
 	has_many :messages
-	has_many :participants
-	has_many :users, :through => :participants
+	has_many :user_conversations
+	has_many :users, :through => :user_conversations
 end

@@ -10,8 +10,9 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  has_many :conversations
-  has_many :participants
+  has_many :messages
+  has_many :user_conversations
+  has_many :user_conversations, through: :user_conversations
 
   def to_param
     profile_name
