@@ -53,6 +53,7 @@ GEM
     formatador (0.2.5)
     geocoder (1.2.5)
     gravtastic (3.2.6)
+    groupify (0.6.0)
     guard (2.6.1)
       formatador (>= 0.2.4)
       listen (~> 2.7)
@@ -176,6 +177,7 @@ DEPENDENCIES
   devise
   geocoder
   gravtastic
+  groupify
   guard-minitest (= 2.3.1)
   jbuilder (~> 2.0)
   jquery-rails

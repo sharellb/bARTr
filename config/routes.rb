@@ -14,8 +14,9 @@ Rails.application.routes.draw do
   put '/:id/', to: 'profiles#update'
   root 'static_pages#home'
 
-  resources :messages
-  resources :conversations
+  resources :groups
+  patch '/groups/:id/', to: 'groups#update', :as => :update_group
+ 
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
   include Gravtastic
   gravtastic 
-
   geocoded_by :location
   validates_presence_of :location, :profile_name
   validates :profile_name, uniqueness: true
@@ -10,9 +9,9 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  has_many :messages
-  has_many :user_conversations
-  has_many :user_conversations, through: :user_conversations
+
+  groupify :group_member
+  groupify :named_group_member
 
   def to_param
     profile_name

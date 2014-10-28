@@ -11,37 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141027203903) do
+ActiveRecord::Schema.define(version: 20141028150729) do
 
-  create_table "conversations", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "group_memberships", force: true do |t|
+    t.string  "member_type"
+    t.integer "member_id"
+    t.integer "group_id"
+    t.string  "group_name"
+    t.string  "membership_type"
   end
 
-  create_table "messages", force: true do |t|
-    t.integer  "conversation_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.text     "body"
-    t.text     "subject"
-    t.integer  "user_id"
+  add_index "group_memberships", ["group_id"], name: "index_group_memberships_on_group_id"
+  add_index "group_memberships", ["group_name"], name: "index_group_memberships_on_group_name"
+  add_index "group_memberships", ["member_id", "member_type"], name: "index_group_memberships_on_member_id_and_member_type"
+
+  create_table "groups", force: true do |t|
+    t.string "type"
   end
 
   create_table "skills", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "teams", force: true do |t|
-    t.string   "name"
-    t.integer  "member_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "user_conversations", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "conversation_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

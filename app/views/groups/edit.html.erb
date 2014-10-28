@@ -1,0 +1,11 @@
+<div class="center">
+	<h2>Group Details</h2>
+
+	<%= form_for @group_membership, url: update_group_path do |f| %>
+		<div><%= f.label "Group Name" %><br />
+		<%= f.text_field :group_name, autofocus: true %></div>
+
+		<div><%= f.submit "Create Group" %></div>
+	<% end %>
+
+</div>

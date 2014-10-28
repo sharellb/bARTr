@@ -5,6 +5,7 @@
 			<div id="profile-top"><%= image_tag @user.gravatar_url %></div>
 			<% if current_user %>
 				<button class="btn"><%= link_to "Edit profile", "/#{@user.profile_name}/edit" %></button>
+				<button class="btn"><%= link_to "Create a new group", "groups/new" %></button>
 			<% end %>
 		</div>
 		<div class="links">
