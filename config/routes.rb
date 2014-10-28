@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
   resources :groups
   patch '/groups/:id/', to: 'groups#update', :as => :update_group
+
  
 
   # Example of regular route:

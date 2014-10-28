@@ -12,7 +12,7 @@ class GroupsController < ApplicationController
 		@group = Group.new
 		if @group.save
 			@group.add current_user
-			redirect_to 
+			render "groups/#{@group.id}/edit"
 		else
 			render 'new'
 		end
@@ -29,6 +29,10 @@ class GroupsController < ApplicationController
 		else
 			render 'new'
 		end
+	end
+
+	def index
+		@groups = Group.all
 	end
 
 	private
