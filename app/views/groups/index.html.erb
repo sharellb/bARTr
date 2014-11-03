@@ -1,1 +1,11 @@
-Hello
+<div class="center-page">
+	<h1 >Groups</h1>
+	<div class="text-block">
+		<% @groups.each do |group| %>
+			<div class="thumbnail">
+				<%= link_to group.group_name, "/#{group.group_id}" %>
+			</div>
+		<% end %>
+	</div>
+</div>
+

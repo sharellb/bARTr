@@ -8,13 +8,14 @@ Rails.application.routes.draw do
   get 'contact' => 'static_pages#contact'
   # You can have the root of your site routed with "root"
   # root 'static_pages#home'
+    resources :groups
   get '/:id', to: 'profiles#show'
   get '/:id/edit', to: 'profiles#edit', :as => :user
   patch '/:id/', to: 'profiles#update', :as => :update_user
   put '/:id/', to: 'profiles#update'
   root 'static_pages#home'
 
-  resources :groups
+
   patch '/groups/:id/', to: 'groups#update', :as => :update_group
 
  
