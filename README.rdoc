@@ -1,4 +1,4 @@
 == bARTr
 
 bARTr is a social network for creative people and artists to collaborate and share talents. It is hosted on heroku at bartrapp.herokuapp.com/
-<tt>rake doc:app</tt>.
+
